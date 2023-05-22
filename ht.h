@@ -15,11 +15,11 @@ ht* ht_create(void);
 // Free memory allocated for hash table, including allocated keys.
 void ht_destroy(ht* table);
 
-// Get item with given key (NUL-terminated) from hash table. Return
+// Get item with given key (single byte) from hash table. Return
 // value (which was set with ht_set), or NULL if key not found.
 void* ht_get(ht* table, const char* key);
 
-// Set item with given key (NUL-terminated) to value (which must not
+// Set item with given key (single byte) to value (which must not
 // be NULL). If not already present in table, key is copied to newly
 // allocated memory (keys are freed automatically when ht_destroy is
 // called). Return address of copied key, or NULL if out of memory.
